@@ -11,34 +11,43 @@ size_t ft_strlen(const char *s)
         l++;
     return (l);
 }
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+{
+	size_t	i;
+	size_t	l;
+
+	l = ft_strlen(src);
+	i = 0;
+	if (dstsize == 0)
+		return(l);
+	while (i < dstsize - 1 && i < l)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (l);
+}
 */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*s_sub;
-	size_t	i;
 	size_t	s_len;
+	size_t	tail;
 
-	i = 0;
 	if (!s)
 		return (NULL);
 	s_len = ft_strlen(s);
-	if (start >= s_len || start + len > s_len)
-	{
-		s_sub = (char *) malloc(sizeof(char));
-		if (!s_sub)
-			return (NULL);
-		s_sub[0] = '\0';
-		return (s_sub);
-	}
-	s_sub = (char *) malloc((len + 1) * sizeof(char));
+	tail = 0;
+	if (start < s_len)
+		tail = s_len - start;
+	if (tail > len)
+		tail = len;
+	s_sub = (char *) malloc((tail + 1) * sizeof(char));
 	if (!s_sub)
 		return (NULL);
-	while (i < len)
-	{
-		s_sub[i] = s[start + i];
-		i++;
-	}
-	s_sub[i] = '\0';
+	ft_strlcpy(s_sub, s + start, tail + 1);
 	return (s_sub);
 }
 /*
