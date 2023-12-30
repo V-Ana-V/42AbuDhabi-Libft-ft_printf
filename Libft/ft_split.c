@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
-
+/*
 size_t	ft_strlen(const char *s)
 {
 	size_t	l;
@@ -50,23 +50,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(s_sub, s + start, tail + 1);
 	return (s_sub);
 }
-
-static int	words_num(char const *s, char c)
-{
-	int	w;
-	int	i;
-
-	w = 0;
-	i = 0;
-	while (*(s + i))
-	{
-		if (*(s + i) != c && (i == 0 || (i != 0 && *(s + i - 1) == c)))
-			w++;
-		i++;
-	}
-	return (w);
-}
-
+*/
 static int	wordlen(char const *s, int i, char c)
 {
 	int	l;
@@ -77,67 +61,91 @@ static int	wordlen(char const *s, int i, char c)
 	return (l);
 }
 
-static void	free_previous(char **result, int w)
+static char	**free_previous(char **res_start, char **result)
 {
-	int	i;
+	char	**start;
 
-	i = 0;
-	while (i < w)
+	start = res_start;
+	while (res_start != result)
 	{
-		free(result[i]);
+		free(*res_start);
+		res_start++;
+	}
+	free(start);
+	return(NULL);
+}
+
+static char	**create_arr(char const *s, char c)
+{
+	int		w;
+	int		i;
+	char	**result;
+
+	if (!s)
+		return (NULL);
+	w = 0;
+	i = 0;
+	while (*(s + i))
+	{
+		if (*(s + i) != c && (i == 0 || (i != 0 && *(s + i - 1) == c)))
+			w++;
 		i++;
 	}
-	free(result);
+	result = (char **) malloc((w + 1) * sizeof(char *));
+	if (!result)
+		return (NULL);
+	result[w] = NULL;
+	return (result);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
 	int		i;
-	int		w;
+	char	**res_start;
 
 	i = 0;
-	w = 0;
-	if (!s)
-		return (NULL);
-	result = (char **) malloc((words_num(s, c) + 1) * sizeof(char *));
+	result = create_arr(s, c);
 	if (!result)
 		return (NULL);
+	res_start = result;
 	while (*(s + i))
 	{
 		if (*(s + i) != c && (i == 0 || (i != 0 && *(s + i - 1) == c)))
 		{
-			result[w] = ft_substr(s, i, wordlen(s, i, c));
-			if (!result[w])
-			{
-				free_previous(result, w);
-				return (NULL);
-			}
-			w++;
+			*result = ft_substr(s, i, wordlen(s, i, c));
+			if (!(*result))
+				return (free_previous(res_start, result));
+			result++;
 		}
 		i++;
 	}
-	result[words_num(s, c)] = NULL;
-	return (result);
+	return (res_start);
 }
-
+/*
 int	main(void)
 {
-	char	s[7] = "aaaaaa";
+	char	s[11] = "I love you";
 	char	c;
 	int		l;
 	char	**result;
+	char	**res_start;
 
 	l = 0;
-	c = 'a';
+	c = ' ';
 	result = ft_split(s, c);
+	res_start = result;
 	while (*(result + l))
 		l++;
 	printf("The length of the result is %d\n", l);
+	if (*result == NULL)
+		printf("all are split characters");
 	while (*result != NULL)
 	{
 		printf("%s\n", *result);
 		result++;
 	}
+	free(res_start);
 	return (0);
 }
+*/
