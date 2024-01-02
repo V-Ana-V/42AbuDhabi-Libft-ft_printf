@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 static int	wordlen(char const *s, int i, char c)
 {
 	int	l;

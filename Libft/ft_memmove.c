@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 static int	overlap(unsigned char *src, unsigned char *dst, size_t len)
 {
 	size_t	i;
