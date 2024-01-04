@@ -6,7 +6,7 @@
 /*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 13:31:53 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/04 10:38:27 by avelikan         ###   ########.fr       */
+/*   Updated: 2024/01/04 11:00:53 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 				if (ft_strncmp(haystack + i, needle, len_needle) == 0)
 					return ((char *)(haystack + i));
 			}
-			else
-				i++;
+			i++;
 		}
 		return (NULL);
 	}

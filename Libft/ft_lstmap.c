@@ -6,7 +6,7 @@
 /*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 12:47:35 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/04 10:11:50 by avelikan         ###   ########.fr       */
+/*   Updated: 2024/01/04 13:43:22 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		node_new = ft_lstnew(c_new);
 		if (!node_new)
 		{
+			if (c_new != NULL)
+				del(c_new);
 			ft_lstclear(&list_new, del);
 			return (NULL);
 		}

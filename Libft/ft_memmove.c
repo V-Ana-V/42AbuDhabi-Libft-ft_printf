@@ -6,7 +6,7 @@
 /*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 13:29:45 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/02 13:42:35 by avelikan         ###   ########.fr       */
+/*   Updated: 2024/01/04 11:56:56 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*ptr_src;
 	unsigned char	*ptr_dst;
 
+	if (!src && !dst)
+		return (NULL);
 	ptr_src = (unsigned char *) src;
 	ptr_dst = (unsigned char *) dst;
 	if (ptr_dst <= ptr_src)

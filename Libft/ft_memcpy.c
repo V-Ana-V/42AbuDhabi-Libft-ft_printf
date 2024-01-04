@@ -6,7 +6,7 @@
 /*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 13:29:38 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/02 13:42:15 by avelikan         ###   ########.fr       */
+/*   Updated: 2024/01/04 11:58:25 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*ptr_dst;
 	size_t			i;
 
+	if (!src && !dst)
+		return (NULL);
 	i = 0;
 	ptr_src = (unsigned char *) src;
 	ptr_dst = (unsigned char *) dst;

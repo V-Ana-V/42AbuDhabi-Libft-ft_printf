@@ -6,7 +6,7 @@
 /*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 13:32:18 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/02 13:56:59 by avelikan         ###   ########.fr       */
+/*   Updated: 2024/01/04 13:24:51 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s_sub = (char *) malloc((tail + 1) * sizeof(char));
 	if (!s_sub)
 		return (NULL);
+	if (start >= s_len)
+	{
+		*s_sub = '\0';
+		return (s_sub);
+	}
 	ft_strlcpy(s_sub, s + start, tail + 1);
 	return (s_sub);
 }
