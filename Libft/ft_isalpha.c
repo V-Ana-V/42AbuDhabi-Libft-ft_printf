@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 13:19:11 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/02 13:28:36 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 11:57:38 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 11:57:43 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

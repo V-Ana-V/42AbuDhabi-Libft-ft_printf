@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 13:19:54 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/02 13:29:14 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 11:58:27 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 11:58:32 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

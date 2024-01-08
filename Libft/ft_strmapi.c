@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 13:31:17 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/02 13:52:54 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 12:07:51 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 12:07:57 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

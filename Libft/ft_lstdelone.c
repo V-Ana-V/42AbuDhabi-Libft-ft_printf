@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/03 12:01:43 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/04 09:45:11 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 11:59:59 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 12:00:01 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

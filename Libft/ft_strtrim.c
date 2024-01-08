@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 13:32:11 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/02 13:56:37 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 12:09:16 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 12:09:18 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	int		l;
 
+	if ((!s1) || (!set))
+		return (0);
 	start = 0;
 	end = 0;
 	l = ft_strlen(s1);

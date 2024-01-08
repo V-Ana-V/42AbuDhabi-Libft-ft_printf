@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/03 11:11:06 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/04 12:18:33 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 11:59:07 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 11:59:10 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

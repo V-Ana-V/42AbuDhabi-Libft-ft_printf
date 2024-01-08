@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 13:32:29 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/02 13:57:52 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 12:09:55 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 12:09:58 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

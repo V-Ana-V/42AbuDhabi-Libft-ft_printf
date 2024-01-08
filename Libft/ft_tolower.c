@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 13:32:23 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/02 13:57:31 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 12:09:42 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 12:09:45 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

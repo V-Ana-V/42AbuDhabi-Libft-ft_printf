@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 13:31:24 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/04 11:34:44 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 12:08:12 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 12:08:15 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

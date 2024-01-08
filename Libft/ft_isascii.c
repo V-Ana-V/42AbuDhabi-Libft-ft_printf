@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 13:19:26 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/02 13:39:00 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 11:57:54 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 11:57:58 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

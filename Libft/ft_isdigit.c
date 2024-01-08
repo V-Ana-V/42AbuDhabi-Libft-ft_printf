@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 13:19:41 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/02 13:39:11 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 11:58:10 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 11:58:14 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 13:29:45 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/04 11:56:56 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 12:02:51 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 12:02:53 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

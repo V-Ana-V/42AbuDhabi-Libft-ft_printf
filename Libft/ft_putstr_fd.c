@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 13:30:21 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/02 13:46:58 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 12:04:13 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 12:04:17 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

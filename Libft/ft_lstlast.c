@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/03 11:04:36 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/03 11:09:44 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 12:00:38 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 12:00:41 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
