@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "Libft/libft.h"
 
-void	ft_putchar(char c)
+void	ft_printchar(char c)
 {
 	write(1, &c, 1);
 }
