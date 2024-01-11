@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-#include "Libft/libft.h"
-#include <stdint.h>
+#include "ft_printf.h"
 
 static uintptr_t	ft_ptrhex(uintptr_t p)
 {
