@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 18:18:42 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/11 18:18:47 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 12:06:22 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 12:06:24 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-#include <unistd.h>
-#include <stdarg.h>
-#include <stdint.h>
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+	size_t	i;
+	size_t	l_s;
+	size_t	l_d;
 
-int	ft_printchar(int c);
-int ft_printstr(char *s);
-int ft_printp(void *ptr);
-int	ft_printint(int nb);
-int	ft_printud(unsigned int nb);
-int	ft_printhex(unsigned int nb, char c);
-int	ft_printf(char *str, ...);
-
-#endif
+	l_s = ft_strlen(src);
+	if ((dstsize == 0) && (!dst))
+		return (l_s);
+	i = 0;
+	l_d = ft_strlen(dst);
+	if (dstsize < l_d + 1)
+		return (dstsize + l_s);
+	while (i + l_d < dstsize - 1 && i < l_s)
+	{
+		dst[i + l_d] = src[i];
+		i++;
+	}
+	dst[i + l_d] = '\0';
+	return (l_d + l_s);
+}

@@ -19,7 +19,7 @@ static int	print_fsp(char fsp, va_list args)
 	else if (fsp == 's')
 		return (ft_printstr(va_arg(args, char *)));
 	else if (fsp == 'p')
-		return (ft_printp(va_arg(args, void *)));
+		return (ft_printp(va_arg(args, uintptr_t)));
 	else if (fsp == 'd' || fsp == 'i')
 		return (ft_printint(va_arg(args, int)));
 	else if (fsp == 'u')
@@ -32,16 +32,14 @@ static int	print_fsp(char fsp, va_list args)
 		if (fsp == '\0')
 			return (1);
 		else
-			return (ft_printchar(fsp) + 1);
+			return (ft_printchar(c) + 1);
 	}
 }
 
-int	ft_printf(char *str, ...)
+void	ft_printf(char *str, ...)
 {
 	va_list	args;
-	int		count;
 
-	count = 0;
 	va_start(args, str);
 	while (*str)
 	{
@@ -59,3 +57,8 @@ int	ft_printf(char *str, ...)
 	va_end(args);
 	return (count);
 }
+
+// int	main(void)
+// {
+// 	printf("%d\n", printf("\0"));
+// }

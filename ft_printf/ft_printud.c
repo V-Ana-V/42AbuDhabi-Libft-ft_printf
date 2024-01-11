@@ -25,21 +25,3 @@ int	ft_printud(unsigned int nb)
 	count++;
 	return (count);
 }
-
-// int	main(void)
-// {
-// 	unsigned int	q;
-// 	int				x;
-// 	int				x_o;
-
-// 	q = UINT_MAX;
-// 	printf("Original function:\n");
-// 	x_o = printf("%u", q);
-// 	printf("\n");
-// 	printf("%d", x_o);
-// 	printf("\n");
-// 	printf("My function:\n");
-// 	x = ft_printud(q);
-// 	printf("\n");
-// 	printf("%d\n", x);
-// }

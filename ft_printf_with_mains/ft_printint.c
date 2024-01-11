@@ -37,3 +37,26 @@ int	ft_printint(int nb)
 	count++;
 	return (count);
 }
+
+// int	main(void)
+// {
+// 	int	x;
+// 	int	x_o;
+// 	int	example;
+
+// 	example = -345689;
+// 	printf("Original function prints:");
+// 	printf("\n");
+// 	x_o = printf("%d", example);
+// 	printf("\n");
+// 	printf("My function prints:");
+// 	printf("\n");
+// 	x = ft_printint(example);
+// 	printf("\n");
+// 	printf("Original function returns: %d", x_o);
+// 	printf("\n");
+// 	printf("My function returns: %d", x);
+// 	printf("\n");
+// 	return (0);
+// }
+//Command to execute is gcc ft_printchar.c -L./Libft -lft

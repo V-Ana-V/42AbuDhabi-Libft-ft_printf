@@ -41,3 +41,22 @@ int ft_printp(void *ptr)
 	p = (uintptr_t) ptr;
 	return (ft_ptrhex(p) + 2);
 }
+
+// int	main(void)
+// {
+// 	void	*ptr;
+// 	int		x;
+// 	int		x_o;
+
+// 	ptr = NULL;
+// 	printf("Original function:\n");
+// 	x_o = printf("%p", ptr);
+// 	printf("\n");
+// 	printf("%d", x_o);
+// 	printf("\n");
+// 	printf("My function:\n");
+// 	x = ft_printp(ptr);
+// 	printf("\n");
+// 	printf("%d\n", x);
+// }
+//Command to execute gcc ft_printp.c -L./Libft -lft

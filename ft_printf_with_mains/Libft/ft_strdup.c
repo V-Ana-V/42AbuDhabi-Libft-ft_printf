@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 18:18:42 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/11 18:18:47 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 12:05:08 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 12:05:12 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-#include <unistd.h>
-#include <stdarg.h>
-#include <stdint.h>
+char	*ft_strdup(const char *s1)
+{
+	int		l;
+	int		i;
+	char	*s1_dup;
 
-int	ft_printchar(int c);
-int ft_printstr(char *s);
-int ft_printp(void *ptr);
-int	ft_printint(int nb);
-int	ft_printud(unsigned int nb);
-int	ft_printhex(unsigned int nb, char c);
-int	ft_printf(char *str, ...);
-
-#endif
+	i = 0;
+	l = ft_strlen(s1);
+	s1_dup = (char *) malloc(l + 1);
+	if (s1_dup == 0)
+		return (NULL);
+	while (i < l)
+	{
+		s1_dup[i] = s1[i];
+		i++;
+	}
+	s1_dup[i] = '\0';
+	return (s1_dup);
+}

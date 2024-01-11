@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 18:18:42 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/11 18:18:47 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 11:59:42 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 11:59:45 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-#include <unistd.h>
-#include <stdarg.h>
-#include <stdint.h>
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	t_list	*l;
+	t_list	*n;
 
-int	ft_printchar(int c);
-int ft_printstr(char *s);
-int ft_printp(void *ptr);
-int	ft_printint(int nb);
-int	ft_printud(unsigned int nb);
-int	ft_printhex(unsigned int nb, char c);
-int	ft_printf(char *str, ...);
-
-#endif
+	if (lst == NULL || del == NULL)
+		return ;
+	l = *lst;
+	while (l != NULL)
+	{
+		n = l->next;
+		ft_lstdelone(l, del);
+		l = n;
+	}
+	*lst = NULL;
+}

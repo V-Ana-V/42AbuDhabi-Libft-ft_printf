@@ -30,3 +30,22 @@ int	ft_printhex(unsigned int nb, char c)
 	count++;
 	return (count);
 }
+
+// int	main(void)
+// {
+// 	unsigned int	q;
+// 	int				x;
+// 	int				x_o;
+
+// 	q = 456;
+// 	printf("Original function:\n");
+// 	x_o = printf("%X", q);
+// 	printf("\n");
+// 	printf("%d", x_o);
+// 	printf("\n");
+// 	printf("My function:\n");
+// 	x = ft_printhex(q, 'X');
+// 	printf("\n");
+// 	printf("%d\n", x);
+// }
+//Command to execute gcc ft_printhex.c -L./Libft -lft

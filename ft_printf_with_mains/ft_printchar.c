@@ -17,3 +17,14 @@ int	ft_printchar(int c)
 	write(1, &c, 1);
 	return (1);
 }
+
+// int main(void)
+// {
+// 	int	x;
+
+// 	x = ft_printchar(1129999999999999999);
+// 	printf("\n%d\n", x);
+// 	printf("%c\n", 1129999999999999999);
+// 	return (0);
+// }
+// Command to execute is gcc ft_printchar.c -L./Libft -lft

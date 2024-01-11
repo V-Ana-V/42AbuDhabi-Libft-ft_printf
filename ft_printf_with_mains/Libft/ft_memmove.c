@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printint.c                                      :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 09:15:04 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/11 09:15:17 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 12:02:51 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 12:02:53 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printint(int nb)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	count;
-	int		d;
+	size_t			i;
+	unsigned char	*ptr_src;
+	unsigned char	*ptr_dst;
 
-	count = 0;
-	if (nb == -2147483648)
+	if (!src && !dst)
+		return (NULL);
+	ptr_src = (unsigned char *) src;
+	ptr_dst = (unsigned char *) dst;
+	if (ptr_dst <= ptr_src)
+		dst = ft_memcpy(dst, src, len);
+	else
 	{
-		count = 11;
-		write(1, "-2147483648", 11);
-		return (count);
+		i = 0;
+		while (i < len)
+		{
+			ptr_dst[len - 1 - i] = ptr_src[len - 1 - i];
+			i++;
+		}
 	}
-	if (nb < 0)
-	{
-		write(1, "-", 1);
-		count++;
-		nb = -nb;
-	}
-	if (nb / 10 != 0)
-		count += ft_printint(nb / 10);
-	d = nb % 10 + 48;
-	write(1, &d, 1);
-	count++;
-	return (count);
+	return (dst);
 }

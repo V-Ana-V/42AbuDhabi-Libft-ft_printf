@@ -1,39 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printint.c                                      :+:      :+:    :+:   */
+/*   ft_printud.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 09:15:04 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/11 09:15:17 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/11 09:14:22 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/11 09:14:34 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printint(int nb)
+int	ft_printud(unsigned int nb)
 {
-	char	count;
-	int		d;
+	char			count;
+	unsigned int	d;
 
 	count = 0;
-	if (nb == -2147483648)
-	{
-		count = 11;
-		write(1, "-2147483648", 11);
-		return (count);
-	}
-	if (nb < 0)
-	{
-		write(1, "-", 1);
-		count++;
-		nb = -nb;
-	}
 	if (nb / 10 != 0)
-		count += ft_printint(nb / 10);
+		count += ft_printud(nb / 10);
 	d = nb % 10 + 48;
 	write(1, &d, 1);
 	count++;
 	return (count);
 }
+
+// int	main(void)
+// {
+// 	unsigned int	q;
+// 	int				x;
+// 	int				x_o;
+
+// 	q = UINT_MAX;
+// 	printf("Original function:\n");
+// 	x_o = printf("%u", q);
+// 	printf("\n");
+// 	printf("%d", x_o);
+// 	printf("\n");
+// 	printf("My function:\n");
+// 	x = ft_printud(q);
+// 	printf("\n");
+// 	printf("%d\n", x);
+// }

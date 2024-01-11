@@ -1,39 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printint.c                                      :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 09:15:04 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/11 09:15:17 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/05 11:56:23 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/05 11:56:30 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printint(int nb)
+static int	is_digit(char c)
 {
-	char	count;
-	int		d;
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
+}
 
-	count = 0;
-	if (nb == -2147483648)
+int	ft_atoi(const char *str)
+{
+	int	i;
+	int	sign;
+	int	num;
+
+	i = 0;
+	sign = 1;
+	num = 0;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-')
 	{
-		count = 11;
-		write(1, "-2147483648", 11);
-		return (count);
+		sign = -1;
+		i++;
 	}
-	if (nb < 0)
+	else if (str[i] == '+')
+		i++;
+	while (is_digit(str[i]))
 	{
-		write(1, "-", 1);
-		count++;
-		nb = -nb;
+		num = num * 10 + sign * (str[i] - '0');
+		i++;
 	}
-	if (nb / 10 != 0)
-		count += ft_printint(nb / 10);
-	d = nb % 10 + 48;
-	write(1, &d, 1);
-	count++;
-	return (count);
+	return (num);
 }
