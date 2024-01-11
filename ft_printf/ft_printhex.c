@@ -15,7 +15,7 @@
 
 int	ft_printhex(unsigned int nb, char c)
 {
-	char	count;
+	int		count;
 	char	d;
 	char	*hex;
 
@@ -49,3 +49,4 @@ int	ft_printhex(unsigned int nb, char c)
 // 	printf("\n");
 // 	printf("%d\n", x);
 // }
+//Command to execute gcc ft_printhex.c -L./Libft -lft
