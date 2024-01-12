@@ -13,13 +13,13 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-#include <unistd.h>
-#include <stdarg.h>
-#include <stdint.h>
+# include <unistd.h>
+# include <stdarg.h>
+# include <stdint.h>
 
 int	ft_printchar(int c);
-int ft_printstr(char *s);
-int ft_printp(void *ptr);
+int	ft_printstr(char *s);
+int	ft_printp(void *ptr);
 int	ft_printint(int nb);
 int	ft_printud(unsigned int nb);
 int	ft_printhex(unsigned int nb, char c);

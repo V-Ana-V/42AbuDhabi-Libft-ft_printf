@@ -28,11 +28,13 @@ static int	print_fsp(char fsp, va_list args)
 		return (ft_printhex(va_arg(args, unsigned int), fsp));
 	else
 	{
-		write(1, "%", 1);
 		if (fsp == '\0')
-			return (1);
+			return (-1);
 		else
+		{
+			write(1, "%", 1);
 			return (ft_printchar(fsp) + 1);
+		}
 	}
 }
 
@@ -40,6 +42,7 @@ int	ft_printf(char *str, ...)
 {
 	va_list	args;
 	int		count;
+	int		len_i;
 
 	count = 0;
 	va_start(args, str);
@@ -47,7 +50,10 @@ int	ft_printf(char *str, ...)
 	{
 		if (*str == '%')
 		{
-			count += print_fsp(*(str + 1), args);
+			len_i = print_fsp(*(str + 1), args);
+			if (len_i == -1)
+				return (-1);
+			count += len_i;
 			str++;
 		}
 		else
