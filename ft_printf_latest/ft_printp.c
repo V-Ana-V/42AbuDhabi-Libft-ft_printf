@@ -14,9 +14,9 @@
 
 static uintptr_t	ft_ptrhex(uintptr_t p)
 {
-	int		count;
-	char	d;
-	char	*hex;
+	uintptr_t	count;
+	char		d;
+	char		*hex;
 
 	hex = "0123456789abcdef";
 	count = 0;

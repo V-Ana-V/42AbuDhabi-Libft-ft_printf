@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avelikan <avelikan@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 09:16:48 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/11 09:16:52 by avelikan         ###   ########.fr       */
+/*   Updated: 2024/01/13 17:03:12 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,45 +26,34 @@ static int	print_fsp(char fsp, va_list args)
 		return (ft_printud(va_arg(args, unsigned int)));
 	else if (fsp == 'x' || fsp == 'X')
 		return (ft_printhex(va_arg(args, unsigned int), fsp));
-	else if (fsp == '%')
-		return (ft_printchar(fsp));
 	else
-	{
-		write(1, "%", 1);
-		ft_printchar(fsp);
-		return (-1);
-	}
+		return (ft_printchar(fsp));
 }
 
 int	ft_printf(const char *str, ...)
 {
 	va_list	args;
 	int		count;
-	int		error;
-	int		len_i;
+	int		re;
 
-	error = 0;
 	count = 0;
 	va_start(args, str);
 	while (*str)
 	{
 		if (*str == '%')
 		{
-			len_i = print_fsp(*(str + 1), args);
-			if (len_i == -1)
-				error = -1;
-			count += len_i;
+			re = print_fsp(*(str + 1), args);
 			str++;
 		}
 		else
-			count += ft_printchar(*str);
+			re = ft_printchar(*str);
+		if (re < 0)
+			return (-1);
+		count += re;
 		if (*str == '\0')
 			break ;
 		str++;
 	}
 	va_end(args);
-	if (error == 0)
-		return (count);
-	else
-		return (error);
+	return (count);
 }

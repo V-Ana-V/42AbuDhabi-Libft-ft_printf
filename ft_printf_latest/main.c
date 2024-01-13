@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printchar.c                                     :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avelikan <avelikan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 05:00:19 by avelikan          #+#    #+#             */
-/*   Updated: 2024/01/13 16:55:31 by avelikan         ###   ########.fr       */
+/*   Created: 2024/01/13 15:58:49 by avelikan          #+#    #+#             */
+/*   Updated: 2024/01/13 17:10:51 by avelikan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
-int	ft_printchar(int c)
+int	main(void)
 {
-	ssize_t	re;
+	int				x;
+	int				x_o;
 
-	re = write(1, &c, 1);
-	if (re == -1)
-		return (-1);
-	else
-		return (1);
+	printf("Original function:\n");
+	x_o = printf("\0");
+	printf("\n");
+	printf("%d", x_o);
+	printf("\n");
+	printf("My function:\n");
+	x = ft_printf("\0");
+	printf("\n");
+	printf("%d\n", x);
 }
