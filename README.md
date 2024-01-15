@@ -16,4 +16,11 @@ Real atoi returns (-1) or (0) is it is iveflowed in long long. It is important t
 
 ## ft_printf
 testers I used:
-1) Francinette and Francinette --strict. Very useful in catching errors. 
+1) Francinette
+  https://github.com/xicodomingues/francinette
+Especially importamt is Francinette --strict.
+3) Tripouille
+  https://github.com/Tripouille/libftTester
+4) Unit tester
+https://github.com/alelievr/libft-unit-test
+
